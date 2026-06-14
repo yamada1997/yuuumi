@@ -10,93 +10,67 @@
 *{box-sizing:border-box;margin:0;padding:0}
 body{font-family:-apple-system,BlinkMacSystemFont,'Hiragino Sans','Yu Gothic UI','Noto Sans JP',sans-serif;background:#eef1f8;min-height:100vh;color:#1a202c}
 
-/* ═══ LOGIN SCREEN ═══ */
-.login-screen{display:none;position:fixed;inset:0;background:linear-gradient(135deg,#1a1a2e,#16213e);align-items:center;justify-content:center;z-index:1000}
-.login-screen.active{display:flex}
-.login-box{background:#fff;border-radius:20px;padding:40px 36px;width:340px;box-shadow:0 20px 60px rgba(0,0,0,.4);text-align:center}
-.login-box .logo{font-size:36px;margin-bottom:14px}
-.login-box h2{font-size:17px;font-weight:800;color:#1a1a2e;margin-bottom:6px}
-.login-box p{font-size:12px;color:#9ca3af;margin-bottom:24px}
-.login-box input{width:100%;border:1.5px solid #e2e8f0;border-radius:10px;padding:12px 14px;font-size:14px;font-family:inherit;outline:none;transition:border-color .2s;margin-bottom:12px;text-align:center;letter-spacing:.1em}
-.login-box input:focus{border-color:#4f8ef7}
-.login-box button{width:100%;background:linear-gradient(135deg,#1a1a2e,#4f8ef7);color:#fff;border:none;border-radius:10px;padding:13px;font-size:14px;font-weight:800;cursor:pointer;font-family:inherit;transition:opacity .2s}
-.login-box button:hover{opacity:.88}
-.login-err{font-size:12px;color:#e55;margin-top:8px;min-height:18px}
-
 /* ═══ HEADER ═══ */
-.hdr{background:linear-gradient(135deg,#1a1a2e,#16213e);color:#fff;padding:14px 28px;display:flex;align-items:center;gap:14px;box-shadow:0 2px 14px rgba(0,0,0,.35);print-color-adjust:exact;-webkit-print-color-adjust:exact}
-.hdr-icon{font-size:22px;width:40px;height:40px;background:rgba(255,255,255,.12);border-radius:10px;display:flex;align-items:center;justify-content:center;flex-shrink:0}
-.hdr-text h1{font-size:16px;font-weight:800}
-.hdr-text p{font-size:11px;opacity:.6;margin-top:2px}
-.hdr-right{margin-left:auto;display:flex;align-items:center;gap:10px}
-.logout-btn{background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.2);color:#fff;border-radius:8px;padding:6px 14px;font-size:12px;font-weight:600;cursor:pointer;font-family:inherit;transition:background .15s}
-.logout-btn:hover{background:rgba(255,255,255,.2)}
+.hdr{background:linear-gradient(135deg,#1a1a2e,#16213e);color:#fff;padding:16px 28px;display:flex;align-items:center;gap:14px;box-shadow:0 2px 14px rgba(0,0,0,.35);print-color-adjust:exact;-webkit-print-color-adjust:exact}
+.hdr-icon{font-size:24px;width:44px;height:44px;background:rgba(255,255,255,.12);border-radius:12px;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.hdr h1{font-size:17px;font-weight:800}
+.hdr p{font-size:11px;opacity:.6;margin-top:3px}
 
 /* ═══ LAYOUT ═══ */
 .wrap{max-width:1240px;margin:0 auto;padding:22px 16px 60px;display:grid;grid-template-columns:370px 1fr;gap:22px;align-items:start}
 @media(max-width:860px){.wrap{grid-template-columns:1fr}}
 
 /* ═══ INPUT PANEL ═══ */
-.inp{background:#fff;border-radius:18px;padding:20px;box-shadow:0 2px 16px rgba(0,0,0,.07);position:sticky;top:16px;max-height:calc(100vh - 88px);overflow-y:auto}
+.inp{background:#fff;border-radius:18px;padding:22px;box-shadow:0 2px 16px rgba(0,0,0,.07);position:sticky;top:16px;max-height:calc(100vh - 40px);overflow-y:auto}
 .inp::-webkit-scrollbar{width:4px}.inp::-webkit-scrollbar-thumb{background:#dde;border-radius:4px}
 
-.sec-title{font-size:11px;font-weight:800;color:#1a1a2e;margin-bottom:10px;display:flex;align-items:center;gap:7px;text-transform:uppercase;letter-spacing:.06em}
+.sec-title{font-size:11.5px;font-weight:800;color:#1a1a2e;margin-bottom:12px;display:flex;align-items:center;gap:7px;text-transform:uppercase;letter-spacing:.06em}
 .sec-title::before{content:'';display:block;width:3px;height:14px;background:#4f8ef7;border-radius:2px}
-.divider{border:none;border-top:1.5px solid #eee;margin:14px 0}
-
-/* テンプレート管理バー */
-.tmpl-bar{display:flex;gap:6px;margin-bottom:14px;align-items:center}
-.tmpl-select{flex:1;border:1.5px solid #e2e8f0;border-radius:8px;padding:7px 10px;font-size:12px;font-family:inherit;outline:none;background:#fafbff;color:#1a202c;cursor:pointer}
-.tmpl-select:focus{border-color:#4f8ef7}
-.tmpl-btn{display:flex;align-items:center;gap:4px;padding:7px 12px;border-radius:8px;font-size:12px;font-weight:700;cursor:pointer;font-family:inherit;border:1.5px solid;transition:all .15s;white-space:nowrap}
-.tmpl-btn.save{background:#f0f5ff;border-color:#c7d2fe;color:#1e3a8a}
-.tmpl-btn.save:hover{background:#dde7ff}
-.tmpl-btn.del{background:#fff5f5;border-color:#fecaca;color:#dc2626}
-.tmpl-btn.del:hover{background:#fde8e8}
+.divider{border:none;border-top:1.5px solid #eee;margin:16px 0}
 
 /* サンプルチップ */
-.smpl-lbl{font-size:10px;font-weight:700;color:#64748b;text-transform:uppercase;letter-spacing:.07em;margin-bottom:6px}
-.chips{display:flex;flex-wrap:wrap;gap:5px;margin-bottom:14px}
-.chip{background:#f0f4ff;border:1.5px solid #c7d2fe;color:#1e3a8a;font-size:11px;font-weight:600;padding:4px 10px;border-radius:18px;cursor:pointer;font-family:inherit;transition:all .15s}
-.chip:hover{background:#dde7ff}
+.smpl-lbl{font-size:10.5px;font-weight:700;color:#64748b;text-transform:uppercase;letter-spacing:.07em;margin-bottom:7px}
+.chips{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:16px}
+.chip{background:#f0f4ff;border:1.5px solid #c7d2fe;color:#1e3a8a;font-size:11px;font-weight:600;padding:5px 11px;border-radius:20px;cursor:pointer;font-family:inherit;transition:all .15s}
+.chip:hover{background:#dde7ff;border-color:#818cf8}
 
 /* テキスト入力 */
-.field{margin-bottom:9px}
-.field label{display:block;font-size:11px;font-weight:700;color:#64748b;margin-bottom:4px}
+.field{margin-bottom:10px}
+.field label{display:block;font-size:11px;font-weight:700;color:#64748b;margin-bottom:4px;letter-spacing:.03em}
 .field input[type=text],.field textarea{width:100%;border:1.5px solid #e2e8f0;border-radius:8px;padding:8px 11px;font-size:13px;font-family:inherit;color:#1a202c;transition:border-color .2s;background:#fafbff}
 .field input[type=text]:focus,.field textarea:focus{outline:none;border-color:#4f8ef7;background:#fff}
-.field textarea{resize:vertical;min-height:60px;line-height:1.65}
+.field textarea{resize:vertical;min-height:64px;line-height:1.65}
 
 /* シチュエーション行 */
 .sit-rows{display:flex;flex-direction:column;gap:6px;margin-bottom:8px}
-.sit-row{display:grid;grid-template-columns:1fr 1fr auto;gap:5px;align-items:center}
-.sit-row input{border:1.5px solid #e2e8f0;border-radius:7px;padding:7px 9px;font-size:12.5px;font-family:inherit;outline:none;transition:border-color .2s;background:#fafbff;color:#1a202c}
+.sit-row{display:grid;grid-template-columns:1fr 1fr;gap:6px;align-items:center}
+.sit-row input{border:1.5px solid #e2e8f0;border-radius:7px;padding:7px 10px;font-size:12.5px;font-family:inherit;outline:none;transition:border-color .2s;background:#fafbff;color:#1a202c}
 .sit-row input:focus{border-color:#4f8ef7;background:#fff}
 .sit-row input.key{font-weight:700;color:#1e3a8a;background:#f0f4ff;border-color:#dde7ff}
 .sit-row input.key:focus{border-color:#4f8ef7}
-.del-btn{background:none;border:none;color:#ccc;font-size:16px;cursor:pointer;padding:2px 4px;line-height:1}
-.del-btn:hover{color:#e55}
+.sit-row .del-btn{background:none;border:none;color:#ccc;font-size:16px;cursor:pointer;padding:2px 4px;justify-self:end}
+.sit-row .del-btn:hover{color:#e55}
 
 /* トーク＆ポイントブロック */
-.talk-blocks{display:flex;flex-direction:column;gap:10px;margin-bottom:8px}
+.talk-blocks{display:flex;flex-direction:column;gap:12px;margin-bottom:10px}
 .tblock{border:1.5px solid #e2e8f0;border-radius:12px;overflow:hidden;background:#fff;position:relative}
-.tblock-head{background:#f5f7ff;border-bottom:1.5px solid #e2e8f0;padding:7px 10px;display:flex;align-items:center;gap:7px}
-.tblock-head input{flex:1;border:none;outline:none;background:transparent;font-size:12px;font-weight:700;color:#1e3a8a;font-family:inherit}
+.tblock-head{background:#f5f7ff;border-bottom:1.5px solid #e2e8f0;padding:8px 12px;display:flex;align-items:center;gap:8px}
+.tblock-head input{flex:1;border:none;outline:none;background:transparent;font-size:12.5px;font-weight:700;color:#1e3a8a;font-family:inherit}
 .tblock-head input::placeholder{color:#aab;font-weight:400}
-.tblock-num{width:20px;height:20px;border-radius:50%;background:#4f8ef7;color:#fff;font-size:10px;font-weight:900;display:flex;align-items:center;justify-content:center;flex-shrink:0}
-.tblock-body{padding:9px 11px;display:flex;flex-direction:column;gap:7px}
-.tblock-body textarea{width:100%;border:1.5px solid #e2e8f0;border-radius:8px;padding:8px 10px;font-size:12.5px;font-family:inherit;resize:vertical;min-height:72px;line-height:1.7;outline:none;transition:border-color .2s;background:#fafbff;color:#1a202c}
+.tblock-num{width:22px;height:22px;border-radius:50%;background:#4f8ef7;color:#fff;font-size:11px;font-weight:900;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.tblock-body{padding:10px 12px;display:flex;flex-direction:column;gap:8px}
+.tblock-body textarea{width:100%;border:1.5px solid #e2e8f0;border-radius:8px;padding:8px 11px;font-size:12.5px;font-family:inherit;resize:vertical;min-height:80px;line-height:1.7;outline:none;transition:border-color .2s;background:#fafbff;color:#1a202c}
 .tblock-body textarea:focus{border-color:#4f8ef7;background:#fff}
-.tblock-body textarea.point-input{min-height:unset;background:#fffbf0;border-color:#f7c948;font-size:12px}
+.tblock-body textarea.point-input{min-height:unset;height:auto;background:#fffbf0;border-color:#f7c948;font-size:12px}
 .tblock-body textarea.point-input:focus{border-color:#e6a817}
-.tblock-label{font-size:10px;font-weight:700;color:#64748b;letter-spacing:.04em}
-.tblock .del-btn-abs{position:absolute;top:6px;right:8px;background:none;border:none;color:#ccc;font-size:14px;cursor:pointer;line-height:1}
+.tblock-label{font-size:10.5px;font-weight:700;color:#64748b;letter-spacing:.04em}
+.tblock .del-btn-abs{position:absolute;top:7px;right:9px;background:none;border:none;color:#ccc;font-size:15px;cursor:pointer;line-height:1}
 .tblock .del-btn-abs:hover{color:#e55}
 
-.add-btn{display:flex;align-items:center;gap:5px;padding:7px 12px;border:1.5px dashed #4f8ef7;border-radius:9px;background:#f0f5ff;color:#4f8ef7;font-size:12px;font-weight:700;cursor:pointer;font-family:inherit;transition:background .15s;width:100%;justify-content:center;margin-bottom:5px}
+.add-btn{display:flex;align-items:center;gap:6px;padding:8px 14px;border:1.5px dashed #4f8ef7;border-radius:10px;background:#f0f5ff;color:#4f8ef7;font-size:12px;font-weight:700;cursor:pointer;font-family:inherit;transition:background .15s;width:100%;justify-content:center;margin-bottom:6px}
 .add-btn:hover{background:#e0ecff}
 
-.gen-btn{width:100%;background:linear-gradient(135deg,#1a1a2e,#4f8ef7);color:#fff;border:none;border-radius:11px;padding:13px;font-size:14px;font-weight:800;cursor:pointer;font-family:inherit;display:flex;align-items:center;justify-content:center;gap:8px;transition:opacity .2s,transform .1s;margin-top:12px}
+.gen-btn{width:100%;background:linear-gradient(135deg,#1a1a2e,#4f8ef7);color:#fff;border:none;border-radius:12px;padding:14px;font-size:14px;font-weight:800;cursor:pointer;font-family:inherit;display:flex;align-items:center;justify-content:center;gap:8px;transition:opacity .2s,transform .1s;margin-top:14px}
 .gen-btn:hover{opacity:.88}.gen-btn:active{transform:scale(.98)}
 
 /* ═══ OUTPUT PANEL ═══ */
@@ -108,10 +82,10 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Hiragino Sans','Yu Gothic UI'
 
 /* ═══ TAB BAR ═══ */
 .tab-bar{display:flex;gap:8px;margin-bottom:16px;flex-wrap:wrap;align-items:center}
-.tab-btn{display:flex;align-items:center;gap:7px;padding:9px 16px;border-radius:10px;border:2px solid transparent;font-size:13px;font-weight:700;cursor:pointer;font-family:inherit;transition:all .18s;background:#e2e8f0;color:#64748b}
+.tab-btn{display:flex;align-items:center;gap:7px;padding:10px 18px;border-radius:10px;border:2px solid transparent;font-size:13px;font-weight:700;cursor:pointer;font-family:inherit;transition:all .18s;background:#e2e8f0;color:#64748b}
 .tab-btn.active{background:#1a1a2e;color:#fff;border-color:#1a1a2e}
 .tab-btn:not(.active):hover{background:#dde7ff;color:#1a1a2e;border-color:#c7d2fe}
-.print-btn{display:flex;align-items:center;gap:7px;padding:9px 16px;border-radius:10px;border:2px solid #4f8ef7;font-size:13px;font-weight:700;cursor:pointer;font-family:inherit;background:#fff;color:#4f8ef7;transition:all .15s;margin-left:auto}
+.print-btn{display:flex;align-items:center;gap:7px;padding:10px 18px;border-radius:10px;border:2px solid #4f8ef7;font-size:13px;font-weight:700;cursor:pointer;font-family:inherit;background:#fff;color:#4f8ef7;transition:all .15s;margin-left:auto}
 .print-btn:hover{background:#f0f5ff}
 
 .view-slide{display:none}.view-slide.active{display:block}
@@ -120,6 +94,8 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Hiragino Sans','Yu Gothic UI'
 /* ═══ SLIDE VIEW ═══ */
 .slide-deck{display:flex;flex-direction:column;gap:24px}
 .pslide{width:100%;aspect-ratio:16/9;border-radius:16px;overflow:hidden;box-shadow:0 6px 32px rgba(26,26,46,.2);display:flex;flex-direction:column;position:relative;print-color-adjust:exact;-webkit-print-color-adjust:exact}
+
+/* Slide: Cover */
 .ps-cover{background:linear-gradient(135deg,#1a1a2e 0%,#16213e 55%,#0f3460 100%);color:#fff;align-items:center;justify-content:center;text-align:center}
 .ps-deco1{position:absolute;right:-5%;top:-10%;width:30%;aspect-ratio:1;background:rgba(255,255,255,.05);border-radius:50%}
 .ps-deco2{position:absolute;left:-3%;bottom:-12%;width:22%;aspect-ratio:1;background:rgba(255,255,255,.04);border-radius:50%}
@@ -128,6 +104,8 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Hiragino Sans','Yu Gothic UI'
 .ps-main-title{font-size:3.2vw;font-weight:900;letter-spacing:-.02em;margin-bottom:2.5%}
 .ps-sub{font-size:1.1vw;opacity:.8;line-height:1.7;background:rgba(255,255,255,.12);border-radius:10px;padding:1.5% 3%;display:inline-block;max-width:85%}
 .ps-footer{position:absolute;bottom:2.5%;right:3%;font-size:.8vw;opacity:.4;font-weight:600}
+
+/* Slide: Situation */
 .ps-sit-slide{background:#fff;padding:4% 5%}
 .ps-hd{display:flex;align-items:center;gap:1.5%;margin-bottom:3%}
 .ps-tag{color:#fff;font-size:.82vw;font-weight:800;padding:.4% 1.4%;border-radius:20px;letter-spacing:.07em;flex-shrink:0}
@@ -136,6 +114,8 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Hiragino Sans','Yu Gothic UI'
 .ps-sit-item{background:#f5f7ff;border-radius:10px;padding:3% 3.5%;border-left:4px solid #4f8ef7}
 .ps-sit-key{font-size:1.1vw;font-weight:800;color:#4f8ef7;margin-bottom:1.2%;letter-spacing:.04em}
 .ps-sit-val{font-size:2vw;color:#1e293b;font-weight:700;line-height:1.4}
+
+/* Slide: Talk block */
 .ps-talk-slide{background:#fff;padding:3.5% 5%}
 .ps-section-label{font-size:.9vw;font-weight:800;color:#4f8ef7;letter-spacing:.08em;background:#f0f4ff;border-radius:6px;padding:.4% 1.2%;display:inline-block;margin-bottom:1.5%}
 .ps-talk-rows{display:flex;flex-direction:column;gap:1.4%;flex:1}
@@ -155,10 +135,14 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Hiragino Sans','Yu Gothic UI'
 .ho-body{padding:15px 20px 18px}
 .ho-sec{font-size:9.5px;font-weight:800;color:#6b7280;text-transform:uppercase;letter-spacing:.1em;display:flex;align-items:center;gap:8px;margin-bottom:8px}
 .ho-sec::after{content:'';flex:1;height:1px;background:#e5e7eb}
+
+/* Situation table */
 .sit-table{width:100%;border-collapse:collapse;margin-bottom:14px;font-size:12.5px}
 .sit-table td{padding:7px 12px;border:1px solid #e5e7eb;vertical-align:top;line-height:1.5}
 .sit-table .sk{background:#f5f7ff;font-weight:800;color:#1e3a8a;width:38%;font-size:11.5px}
 .sit-table .sv{color:#1e293b}
+
+/* Talk script */
 .ho-talk-block{margin-bottom:14px;border:1.5px solid #e2e8f0;border-radius:10px;overflow:hidden}
 .ho-talk-head{background:#f5f7ff;padding:7px 14px;font-size:11px;font-weight:800;color:#4f8ef7;letter-spacing:.06em;border-bottom:1px solid #e0e8ff}
 .ho-talk-rows{padding:10px 14px;display:flex;flex-direction:column;gap:8px}
@@ -169,30 +153,9 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Hiragino Sans','Yu Gothic UI'
 .ho-point-label{font-size:9.5px;font-weight:800;color:#b45309;text-transform:uppercase;letter-spacing:.07em;margin-bottom:3px}
 .ho-footer{border-top:1px solid #eee;margin-top:14px;padding-top:8px;font-size:10px;color:#bbb;display:flex;justify-content:space-between}
 
-/* ═══ TOAST ═══ */
-.toast{position:fixed;bottom:24px;right:24px;background:#1a1a2e;color:#fff;padding:12px 20px;border-radius:10px;font-size:13px;font-weight:600;box-shadow:0 4px 20px rgba(0,0,0,.3);transform:translateY(80px);opacity:0;transition:all .3s;z-index:999}
-.toast.show{transform:translateY(0);opacity:1}
-.toast.ok{background:#0f9b58}
-.toast.err{background:#dc2626}
-
-/* ═══ MODAL ═══ */
-.modal-bg{display:none;position:fixed;inset:0;background:rgba(0,0,0,.4);z-index:500;align-items:center;justify-content:center}
-.modal-bg.active{display:flex}
-.modal{background:#fff;border-radius:16px;padding:28px 28px 22px;width:340px;box-shadow:0 20px 60px rgba(0,0,0,.3)}
-.modal h3{font-size:15px;font-weight:800;margin-bottom:10px}
-.modal p{font-size:13px;color:#64748b;margin-bottom:16px;line-height:1.6}
-.modal input{width:100%;border:1.5px solid #e2e8f0;border-radius:8px;padding:10px 12px;font-size:13px;font-family:inherit;outline:none;transition:border-color .2s;margin-bottom:14px}
-.modal input:focus{border-color:#4f8ef7}
-.modal-btns{display:flex;gap:8px;justify-content:flex-end}
-.modal-btn{padding:9px 18px;border-radius:8px;font-size:13px;font-weight:700;cursor:pointer;font-family:inherit;border:none;transition:all .15s}
-.modal-btn.cancel{background:#eee;color:#555}
-.modal-btn.cancel:hover{background:#ddd}
-.modal-btn.primary{background:linear-gradient(135deg,#1a1a2e,#4f8ef7);color:#fff}
-.modal-btn.primary:hover{opacity:.88}
-
 /* ═══ PRINT ═══ */
 @media print{
-  .hdr,.inp,.tab-bar,.login-screen,.toast,.modal-bg{display:none!important}
+  .hdr,.inp,.tab-bar{display:none!important}
   .wrap{display:block;padding:0;max-width:100%}
   body{background:#fff!important}
   body.print-slide .view-slide{display:block!important}
@@ -210,27 +173,11 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Hiragino Sans','Yu Gothic UI'
 </head>
 <body>
 
-<!-- ログイン画面 -->
-<div class="login-screen active" id="login-screen">
-  <div class="login-box">
-    <div class="logo">📋</div>
-    <h2>接客ケーススタディ</h2>
-    <p>資料作成ツール</p>
-    <input type="password" id="pw-input" placeholder="パスワードを入力" onkeydown="if(event.key==='Enter')doLogin()">
-    <button onclick="doLogin()">ログイン</button>
-    <div class="login-err" id="login-err"></div>
-  </div>
-</div>
-
-<!-- ヘッダー -->
 <div class="hdr">
   <div class="hdr-icon">📋</div>
-  <div class="hdr-text">
+  <div>
     <h1>接客ケーススタディ 資料作成ツール</h1>
-    <p>📽 研修投影用スライド　📄 参加者配布用トークスクリプト</p>
-  </div>
-  <div class="hdr-right">
-    <button class="logout-btn" onclick="doLogout()">ログアウト</button>
+    <p>📽 研修投影用スライド（横長）　📄 参加者配布用トークスクリプト（A4）</p>
   </div>
 </div>
 
@@ -238,26 +185,12 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Hiragino Sans','Yu Gothic UI'
 
 <!-- ═══ 入力パネル ═══ -->
 <div class="inp">
-
-  <!-- テンプレート管理 -->
-  <div class="sec-title">📂 テンプレート</div>
-  <div class="tmpl-bar">
-    <select class="tmpl-select" id="tmpl-select" onchange="loadTemplate()">
-      <option value="">── 保存済みテンプレートを選択 ──</option>
-    </select>
-    <button class="tmpl-btn del" onclick="deleteTemplate()" title="削除">🗑</button>
-  </div>
-  <button class="tmpl-btn save" style="width:100%;justify-content:center;margin-bottom:14px" onclick="openSaveModal()">💾 現在の内容をテンプレートとして保存</button>
-
-  <!-- サンプル -->
   <div class="smpl-lbl">📌 サンプルを読み込む</div>
   <div class="chips">
     <button class="chip" onclick="loadSample(0)">機種変更提案</button>
     <button class="chip" onclick="loadSample(1)">料金不安</button>
     <button class="chip" onclick="loadSample(2)">他社比較中</button>
   </div>
-
-  <hr class="divider">
 
   <!-- 基本情報 -->
   <div class="sec-title">基本情報</div>
@@ -292,169 +225,96 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Hiragino Sans','Yu Gothic UI'
 
 </div>
 
-<!-- 保存モーダル -->
-<div class="modal-bg" id="save-modal">
-  <div class="modal">
-    <h3>💾 テンプレートとして保存</h3>
-    <p>このケーススタディに名前をつけて保存します</p>
-    <input type="text" id="tmpl-name-input" placeholder="例：機種変更 家族提案パターン">
-    <div class="modal-btns">
-      <button class="modal-btn cancel" onclick="closeSaveModal()">キャンセル</button>
-      <button class="modal-btn primary" onclick="saveTemplate()">保存する</button>
-    </div>
-  </div>
-</div>
-
-<!-- トースト -->
-<div class="toast" id="toast"></div>
-
 <script>
-/* ═══ Auth ═══ */
-async function checkAuth() {
-  const res = await fetch('/api/me');
-  const d = await res.json();
-  if (d.loggedIn) {
-    document.getElementById('login-screen').classList.remove('active');
-    loadTemplateList();
-  }
-}
-
-async function doLogin() {
-  const pw = document.getElementById('pw-input').value;
-  const res = await fetch('/api/login', {
-    method: 'POST', headers: {'Content-Type':'application/json'},
-    body: JSON.stringify({ password: pw })
-  });
-  if (res.ok) {
-    document.getElementById('login-screen').classList.remove('active');
-    document.getElementById('login-err').textContent = '';
-    loadTemplateList();
-  } else {
-    const d = await res.json();
-    document.getElementById('login-err').textContent = d.error || 'エラー';
-  }
-}
-
-async function doLogout() {
-  await fetch('/api/logout', { method: 'POST' });
-  location.reload();
-}
-
-/* ═══ Templates ═══ */
-async function loadTemplateList() {
-  const res = await fetch('/api/templates');
-  if (!res.ok) return;
-  const list = await res.json();
-  const sel = document.getElementById('tmpl-select');
-  sel.innerHTML = '<option value="">── 保存済みテンプレートを選択 ──</option>';
-  list.forEach(t => {
-    const opt = document.createElement('option');
-    opt.value = t.id;
-    opt.textContent = t.name;
-    sel.appendChild(opt);
-  });
-}
-
-async function loadTemplate() {
-  const id = document.getElementById('tmpl-select').value;
-  if (!id) return;
-  const res = await fetch(`/api/templates/${id}`);
-  if (!res.ok) return;
-  const { data } = await res.json();
-  applyData(data);
-  toast('テンプレートを読み込みました', 'ok');
-}
-
-async function deleteTemplate() {
-  const id = document.getElementById('tmpl-select').value;
-  if (!id) { toast('テンプレートを選択してください', 'err'); return; }
-  if (!confirm('このテンプレートを削除しますか？')) return;
-  await fetch(`/api/templates/${id}`, { method: 'DELETE' });
-  await loadTemplateList();
-  toast('削除しました');
-}
-
-function openSaveModal() {
-  const title = document.getElementById('title').value;
-  document.getElementById('tmpl-name-input').value = title || '';
-  document.getElementById('save-modal').classList.add('active');
-  document.getElementById('tmpl-name-input').focus();
-}
-function closeSaveModal() {
-  document.getElementById('save-modal').classList.remove('active');
-}
-
-async function saveTemplate() {
-  const name = document.getElementById('tmpl-name-input').value.trim();
-  if (!name) { alert('名前を入力してください'); return; }
-  const data = getData();
-  const id = document.getElementById('tmpl-select').value;
-  if (id) {
-    // 選択中のテンプレートを上書き確認
-    const existingName = document.getElementById('tmpl-select').options[document.getElementById('tmpl-select').selectedIndex]?.text;
-    if (existingName && existingName === name) {
-      await fetch(`/api/templates/${id}`, {
-        method: 'PUT', headers: {'Content-Type':'application/json'},
-        body: JSON.stringify({ name, data })
-      });
-      closeSaveModal();
-      await loadTemplateList();
-      toast('上書き保存しました', 'ok');
-      return;
-    }
-  }
-  const res = await fetch('/api/templates', {
-    method: 'POST', headers: {'Content-Type':'application/json'},
-    body: JSON.stringify({ name, data })
-  });
-  const { id: newId } = await res.json();
-  closeSaveModal();
-  await loadTemplateList();
-  document.getElementById('tmpl-select').value = newId;
-  toast('保存しました', 'ok');
-}
-
-/* ═══ Form ═══ */
+/* ─── サンプルデータ ─── */
 const SAMPLES = [
   {
     title: '家族まとめて機種変更提案',
     meta: '2026年6月 新人研修 / 店舗スタッフ向け',
-    sit: [['来店内容','機種変更 1台希望'],['来店数','1名'],['機変対象者','2名（非来店）'],['請求','まとめてる']],
+    sit: [
+      ['来店内容', '機種変更 1台希望'],
+      ['来店数', '1名'],
+      ['機変対象者', '2名（非来店）'],
+      ['請求', 'まとめてる'],
+    ],
     talks: [
-      {section:'',talks:['「今回機種変更ご希望1台とのことですが、ご家族様も一緒にお見直しできそうなので、見積もりだけ作成させていただきますね！」'],point:'トータル提案のYes取り、家族情報F#を確認した上でのお伝え'},
-      {section:'〜ヒアリング〜',talks:['「全体的にお見直しさせていただき、ご一緒にお見積り作成しております！」','「今回ご家族様もご一緒に変えていただいたほうが今後の2年のタイミングも揃えられて楽なので、同じタイミングで機種変更をおすすめしています」','「ご家族様は本日ご来店できそうですか？」\nできない場合「後日ご来店できる日にご予約お取りしておきますね！」'],point:'来店誘導 → 予約を取る流れ'},
-    ]
+      {
+        section: '',
+        talks: ['「今回機種変更ご希望1台とのことですが、ご家族様も一緒にお見直しできそうなので、見積もりだけ作成させていただきますね！」'],
+        point: 'トータル提案のYes取り、家族情報F#を確認した上でのお伝え',
+      },
+      {
+        section: '〜ヒアリング〜',
+        talks: [
+          '「全体的にお見直しさせていただき、ご一緒にお見積り作成しております！」',
+          '「今回ご家族様もご一緒に変えていただいたほうが今後の2年のタイミングも揃えられて楽なので、同じタイミングで機種変更をおすすめしています」',
+          '「ご家族様は本日ご来店できそうですか？」\nできない場合「後日ご来店できる日にご予約お取りしておきますね！」',
+        ],
+        point: '来店誘導 → 予約を取る流れ',
+      },
+    ],
   },
   {
     title: '料金不安への切り返し',
     meta: '2026年6月 販売研修 / 新人スタッフ向け',
-    sit: [['来店内容','スマホ乗り換え'],['来店数','1名'],['利用中','格安SIM（月額2,000円）'],['懸念','料金が上がりそうで不安']],
+    sit: [
+      ['来店内容', 'スマホ乗り換え'],
+      ['来店数', '1名'],
+      ['利用中', '格安SIM（月額2,000円）'],
+      ['懸念', '料金が上がりそうで不安'],
+    ],
     talks: [
-      {section:'',talks:['「そうですよね、今よりコストが上がるのはご不安ですよね。実際にどのくらいご利用されているか、少し聞かせていただけますか？」'],point:'まず否定せず共感。現状ヒアリングへ自然につなげる'},
-      {section:'〜試算提示〜',talks:['「今のご利用状況を整理させていただきます。月額・データ量・使い方を確認してから、一番お得なプランをご提案しますね。」','「こちらの試算表をご覧ください。機種代・サポート・補償込みのトータルで比べると、実は今より月々〇〇円お得になるケースが多いんですよ。」'],point:'数字・資料で視覚的に説明。感情論でなく根拠を示す'},
-    ]
+      {
+        section: '',
+        talks: ['「そうですよね、今よりコストが上がるのはご不安ですよね。実際にどのくらいご利用されているか、少し聞かせていただけますか？」'],
+        point: 'まず否定せず共感。現状ヒアリングへ自然につなげる',
+      },
+      {
+        section: '〜試算提示〜',
+        talks: [
+          '「今のご利用状況を整理させていただきます。月額・データ量・使い方を確認してから、一番お得なプランをご提案しますね。」',
+          '「こちらの試算表をご覧ください。機種代・サポート・補償込みのトータルで比べると、実は今より月々〇〇円お得になるケースが多いんですよ。」',
+        ],
+        point: '数字・資料で視覚的に説明。感情論でなく根拠を示す',
+      },
+    ],
   },
   {
     title: '他社比較中のお客様対応',
     meta: '2026年6月 販売研修 / 中堅スタッフ向け',
-    sit: [['来店内容','スマホ購入検討'],['来店数','1名'],['状況','提案後に「他店でも確認したい」と退店しようとしている']],
+    sit: [
+      ['来店内容', 'スマホ購入検討'],
+      ['来店数', '1名'],
+      ['状況', '提案後に「他店でも確認したい」と退店しようとしている'],
+    ],
     talks: [
-      {section:'',talks:['「確かに、せっかくなら一番お得なところで決めたいですよね。その気持ち、すごくよく分かります。」'],point:'比較意欲を肯定する。否定・引き留めはしない'},
-      {section:'〜差別化の提示〜',talks:['「実は他社さんとの違いを、私のほうから整理させてください。料金だけでなく、サポート・保証・下取り額で比べると差が出るんです。」','「当店限定で、ご購入後も無料でご相談いただけるサポートがございます。」','「もし他店さんを見てきた後でもご相談ください。担当の私が責任を持って対応させていただきます。」'],point:'当店の強みを1〜2点に絞って提示。次の接触機会をつくる'},
-    ]
+      {
+        section: '',
+        talks: ['「確かに、せっかくなら一番お得なところで決めたいですよね。その気持ち、すごくよく分かります。」'],
+        point: '比較意欲を肯定する。否定・引き留めはしない',
+      },
+      {
+        section: '〜差別化の提示〜',
+        talks: [
+          '「実は他社さんとの違いを、私のほうから整理させてください。料金だけでなく、サポート・保証・下取り額で比べると差が出るんです。」',
+          '「当店限定で、ご購入後も無料でご相談いただけるサポートがございます。」',
+          '「もし他店さんを見てきた後でもご相談ください。担当の私が責任を持って対応させていただきます。」',
+        ],
+        point: '当店の強みを1〜2点に絞って提示。次の接触機会をつくる',
+      },
+    ],
   },
 ];
 
-function loadSample(i) { applyData(SAMPLES[i]); }
-
-function applyData(d) {
-  document.getElementById('title').value = d.title || '';
-  document.getElementById('meta').value = d.meta || '';
+function loadSample(i) {
+  const s = SAMPLES[i];
+  document.getElementById('title').value = s.title;
+  document.getElementById('meta').value = s.meta;
   document.getElementById('sit-rows').innerHTML = '';
   document.getElementById('talk-blocks').innerHTML = '';
   sitCount = 0; talkCount = 0;
-  (d.sit||[]).forEach(([k,v]) => addSitRow(k, v));
-  (d.talks||[]).forEach(t => addTalkBlock(t.section, t.talks, t.point));
+  s.sit.forEach(([k, v]) => addSitRow(k, v));
+  s.talks.forEach(t => addTalkBlock(t.section, t.talks, t.point));
 }
 
 let sitCount = 0, talkCount = 0;
@@ -462,8 +322,12 @@ let sitCount = 0, talkCount = 0;
 function addSitRow(key='', val='') {
   const id = ++sitCount;
   const div = document.createElement('div');
-  div.className = 'sit-row'; div.id = `sit-${id}`;
-  div.innerHTML = `<input type="text" class="key" value="${esc(key)}" placeholder="項目名"><input type="text" value="${esc(val)}" placeholder="内容"><button class="del-btn" onclick="document.getElementById('sit-${id}').remove()">×</button>`;
+  div.className = 'sit-row';
+  div.id = `sit-${id}`;
+  div.innerHTML = `
+    <input type="text" class="key" value="${esc(key)}" placeholder="項目名（例：来店内容）">
+    <input type="text" value="${esc(val)}" placeholder="内容">
+    <button class="del-btn" onclick="document.getElementById('sit-${id}').remove()">×</button>`;
   document.getElementById('sit-rows').appendChild(div);
 }
 
@@ -471,7 +335,8 @@ function addTalkBlock(section='', talks=[], point='') {
   const id = ++talkCount;
   const talkVal = Array.isArray(talks) ? talks.join('\n') : talks;
   const div = document.createElement('div');
-  div.className = 'tblock'; div.id = `tb-${id}`;
+  div.className = 'tblock';
+  div.id = `tb-${id}`;
   div.innerHTML = `
     <button class="del-btn-abs" onclick="document.getElementById('tb-${id}').remove()">×</button>
     <div class="tblock-head">
@@ -479,7 +344,7 @@ function addTalkBlock(section='', talks=[], point='') {
       <input type="text" value="${esc(section)}" placeholder="セクション見出し（例：〜ヒアリング〜）省略可">
     </div>
     <div class="tblock-body">
-      <div class="tblock-label">💬 トーク例（複数は改行で区切る）</div>
+      <div class="tblock-label">💬 トーク例（複数の場合は改行で区切る）</div>
       <textarea placeholder="例：「今回機種変更ご希望とのことですが…」">${esc(talkVal)}</textarea>
       <div class="tblock-label">📌 ポイント</div>
       <textarea class="point-input" rows="2" placeholder="例：トータル提案のYes取り、家族情報確認した上でのお伝え">${esc(point)}</textarea>
@@ -487,76 +352,134 @@ function addTalkBlock(section='', talks=[], point='') {
   document.getElementById('talk-blocks').appendChild(div);
 }
 
-function esc(s) { return String(s||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;'); }
+function esc(s) {
+  return String(s||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+}
 
 function getData() {
+  const title = document.getElementById('title').value || 'ケーススタディ';
+  const meta = document.getElementById('meta').value || '';
   const sit = [];
   document.querySelectorAll('.sit-row').forEach(r => {
     const inps = r.querySelectorAll('input');
-    if (inps[0].value||inps[1].value) sit.push([inps[0].value,inps[1].value]);
+    if (inps[0].value || inps[1].value) sit.push([inps[0].value, inps[1].value]);
   });
   const talks = [];
   document.querySelectorAll('.tblock').forEach(b => {
-    const section = b.querySelector('.tblock-head input').value||'';
+    const section = b.querySelector('.tblock-head input').value || '';
     const txts = b.querySelectorAll('textarea');
-    const talkLines = (txts[0].value||'').split('\n').map(l=>l.trim()).filter(l=>l);
-    talks.push({section, talks:talkLines, point:txts[1].value||''});
+    const talkRaw = txts[0].value || '';
+    const point = txts[1].value || '';
+    const talkLines = talkRaw.split('\n').map(l => l.trim()).filter(l => l);
+    talks.push({ section, talks: talkLines, point });
   });
-  return { title:document.getElementById('title').value||'ケーススタディ', meta:document.getElementById('meta').value||'', sit, talks };
+  return { title, meta, sit, talks };
 }
 
-/* ═══ Tab & Print ═══ */
+/* ─── Tab ─── */
 let curTab = 'slide';
 function switchTab(t) {
   curTab = t;
-  document.querySelectorAll('.tab-btn').forEach(b=>b.classList.toggle('active',b.dataset.tab===t));
-  document.querySelector('.view-slide').classList.toggle('active',t==='slide');
-  document.querySelector('.view-handout').classList.toggle('active',t==='handout');
+  document.querySelectorAll('.tab-btn').forEach(b => b.classList.toggle('active', b.dataset.tab === t));
+  document.querySelector('.view-slide').classList.toggle('active', t === 'slide');
+  document.querySelector('.view-handout').classList.toggle('active', t === 'handout');
 }
+
+/* ─── Print ─── */
 function printView() {
   let st = document.getElementById('pst');
-  if(!st){st=document.createElement('style');st.id='pst';document.head.appendChild(st)}
-  st.textContent = curTab==='slide'?'@page{size:A4 landscape;margin:0}':'@page{size:A4 portrait;margin:10mm}';
-  document.body.className = curTab==='slide'?'print-slide':'print-handout';
-  setTimeout(()=>{window.print();document.body.className=''},120);
+  if (!st) { st = document.createElement('style'); st.id = 'pst'; document.head.appendChild(st); }
+  st.textContent = curTab === 'slide' ? '@page{size:A4 landscape;margin:0}' : '@page{size:A4 portrait;margin:10mm}';
+  document.body.className = curTab === 'slide' ? 'print-slide' : 'print-handout';
+  setTimeout(() => { window.print(); document.body.className = ''; }, 120);
 }
 
-/* ═══ Generate ═══ */
+/* ─── Generate ─── */
 function generate() {
   const d = getData();
-  const emoji = pickEmoji(d.title+(d.sit.map(r=>r[1]).join('')));
-  const today = new Date().toLocaleDateString('ja-JP',{year:'numeric',month:'long',day:'numeric'});
+  const emoji = pickEmoji(d.title + (d.sit.map(r=>r[1]).join('')));
+  const today = new Date().toLocaleDateString('ja-JP', { year:'numeric', month:'long', day:'numeric' });
 
+  /* ── SLIDES ── */
+  // Slide 1: Cover
   const coverSlide = `<div class="pslide ps-cover" style="display:flex">
     <div class="ps-deco1"></div><div class="ps-deco2"></div>
     <div class="ps-cover-inner">
       <div class="ps-emoji">${emoji}</div>
       <div class="ps-main-title">${esc(d.title)}</div>
-      ${d.meta?`<div class="ps-sub">${esc(d.meta)}</div>`:''}
+      ${d.meta ? `<div class="ps-sub">${esc(d.meta)}</div>` : ''}
     </div>
     <div class="ps-footer">接客ケーススタディ</div>
   </div>`;
 
-  const sitSlide = d.sit.length?`<div class="pslide ps-sit-slide">
-    <div class="ps-hd"><span class="ps-tag" style="background:#1a1a2e">SITUATION</span><span class="ps-htitle">📍 シチュエーション</span></div>
-    <div class="ps-sit-grid">${d.sit.map(([k,v])=>`<div class="ps-sit-item"><div class="ps-sit-key">${esc(k)}</div><div class="ps-sit-val">${esc(v)}</div></div>`).join('')}</div>
-  </div>`:'';
-
-  const talkSlides = d.talks.map(tb=>`<div class="pslide ps-talk-slide">
-    <div class="ps-hd"><span class="ps-tag" style="background:#4f8ef7">TALK SCRIPT</span><span class="ps-htitle">💬 トーク例</span></div>
-    ${tb.section?`<div class="ps-section-label">${esc(tb.section)}</div>`:''}
-    <div class="ps-talk-rows">${tb.talks.map(t=>`<div class="ps-talk-row"><span class="ps-talk-icon">💬</span><div class="ps-talk-text">${esc(t)}</div></div>`).join('')}</div>
-    ${tb.point?`<div class="ps-point-box"><div class="ps-point-label">📌 ポイント</div><div class="ps-point-text">${esc(tb.point)}</div></div>`:''}
-  </div>`).join('');
-
-  const sitRows = d.sit.map(([k,v])=>`<tr><td class="sk">${esc(k)}</td><td class="sv">${esc(v)}</td></tr>`).join('');
-  const talkBlocks = d.talks.map(tb=>`<div class="ho-talk-block">
-    ${tb.section?`<div class="ho-talk-head">${esc(tb.section)}</div>`:''}
-    <div class="ho-talk-rows">
-      ${tb.talks.map(t=>`<div class="ho-talk-row"><span class="ho-talk-icon">💬</span><div class="ho-talk-text">${esc(t)}</div></div>`).join('')}
-      ${tb.point?`<div class="ho-point"><div class="ho-point-label">📌 ポイント</div>${esc(tb.point)}</div>`:''}
+  // Slide 2: Situation
+  const sitItems = d.sit.map(([k, v]) => `
+    <div class="ps-sit-item">
+      <div class="ps-sit-key">${esc(k)}</div>
+      <div class="ps-sit-val">${esc(v)}</div>
+    </div>`).join('');
+  const sitSlide = d.sit.length ? `<div class="pslide ps-sit-slide">
+    <div class="ps-hd">
+      <span class="ps-tag" style="background:#1a1a2e">SITUATION</span>
+      <span class="ps-htitle">📍 シチュエーション</span>
     </div>
-  </div>`).join('');
+    <div class="ps-sit-grid">${sitItems}</div>
+  </div>` : '';
+
+  // Slides 3+: Talk blocks
+  const talkSlides = d.talks.map(tb => {
+    const rows = tb.talks.map(t => `
+      <div class="ps-talk-row">
+        <span class="ps-talk-icon">💬</span>
+        <div class="ps-talk-text">${esc(t)}</div>
+      </div>`).join('');
+    const sectionLabel = tb.section ? `<div class="ps-section-label">${esc(tb.section)}</div>` : '';
+    const pointBox = tb.point ? `<div class="ps-point-box">
+      <div class="ps-point-label">📌 ポイント</div>
+      <div class="ps-point-text">${esc(tb.point)}</div>
+    </div>` : '';
+    return `<div class="pslide ps-talk-slide">
+      <div class="ps-hd">
+        <span class="ps-tag" style="background:#4f8ef7">TALK SCRIPT</span>
+        <span class="ps-htitle">💬 トーク例</span>
+      </div>
+      ${sectionLabel}
+      <div class="ps-talk-rows">${rows}</div>
+      ${pointBox}
+    </div>`;
+  }).join('');
+
+  const slideHTML = `<div class="slide-deck">${coverSlide}${sitSlide}${talkSlides}</div>`;
+
+  /* ── HANDOUT ── */
+  const sitRows = d.sit.map(([k, v]) => `<tr><td class="sk">${esc(k)}</td><td class="sv">${esc(v)}</td></tr>`).join('');
+
+  const talkBlocks = d.talks.map(tb => {
+    const head = tb.section ? `<div class="ho-talk-head">${esc(tb.section)}</div>` : '';
+    const rows = tb.talks.map(t => `<div class="ho-talk-row"><span class="ho-talk-icon">💬</span><div class="ho-talk-text">${esc(t)}</div></div>`).join('');
+    const pt = tb.point ? `<div class="ho-point"><div class="ho-point-label">📌 ポイント</div>${esc(tb.point)}</div>` : '';
+    return `<div class="ho-talk-block">${head}<div class="ho-talk-rows">${rows}${pt}</div></div>`;
+  }).join('');
+
+  const handoutHTML = `<div class="ho-wrap">
+    <div class="ho-hdr">
+      <div class="ho-emoji-box">${emoji}</div>
+      <div>
+        <h2>${esc(d.title)}</h2>
+        <span class="ho-badge">📄 配布用トークスクリプト</span>
+      </div>
+    </div>
+    <div class="ho-body">
+      ${d.sit.length ? `<div class="ho-sec">📍 シチュエーション</div>
+      <table class="sit-table"><tbody>${sitRows}</tbody></table>` : ''}
+      <div class="ho-sec">💬 トーク＆ポイント</div>
+      ${talkBlocks}
+      <div class="ho-footer">
+        <span>研修用資料 ／ 無断転載禁止</span>
+        <span>${esc(d.meta)} ／ ${today}</span>
+      </div>
+    </div>
+  </div>`;
 
   document.getElementById('out').innerHTML = `
     <div class="tab-bar">
@@ -567,42 +490,22 @@ function generate() {
         印刷 / PDF保存
       </button>
     </div>
-    <div class="view-slide active"><div class="slide-deck">${coverSlide}${sitSlide}${talkSlides}</div></div>
-    <div class="view-handout"><div class="ho-wrap">
-      <div class="ho-hdr"><div class="ho-emoji-box">${emoji}</div><div><h2>${esc(d.title)}</h2><span class="ho-badge">📄 配布用トークスクリプト</span></div></div>
-      <div class="ho-body">
-        ${d.sit.length?`<div class="ho-sec">📍 シチュエーション</div><table class="sit-table"><tbody>${sitRows}</tbody></table>`:''}
-        <div class="ho-sec">💬 トーク＆ポイント</div>
-        ${talkBlocks}
-        <div class="ho-footer"><span>研修用資料 ／ 無断転載禁止</span><span>${esc(d.meta)} ／ ${today}</span></div>
-      </div>
-    </div></div>`;
-  curTab='slide';
+    <div class="view-slide active">${slideHTML}</div>
+    <div class="view-handout">${handoutHTML}</div>`;
+  curTab = 'slide';
 }
 
 function pickEmoji(s) {
-  if(/クレーム|苦情|怒|不具合/.test(s))return'🙏';
-  if(/料金|コスト|費用|高い/.test(s))return'💰';
-  if(/比較|他社|確認/.test(s))return'⚖️';
-  if(/相談|家族|主人|奥/.test(s))return'👨‍👩‍👧';
-  if(/光|回線|ネット/.test(s))return'🌐';
-  if(/機種変|スマホ|携帯/.test(s))return'📱';
-  return'💼';
+  if (/クレーム|苦情|怒|不具合/.test(s)) return '🙏';
+  if (/料金|コスト|費用|高い/.test(s)) return '💰';
+  if (/比較|他社|確認/.test(s)) return '⚖️';
+  if (/相談|家族|主人|奥/.test(s)) return '👨‍👩‍👧';
+  if (/光|回線|ネット/.test(s)) return '🌐';
+  if (/機種変|スマホ|携帯/.test(s)) return '📱';
+  return '💼';
 }
 
-/* ═══ Toast ═══ */
-function toast(msg, type='') {
-  const el = document.getElementById('toast');
-  el.textContent = msg;
-  el.className = `toast ${type} show`;
-  setTimeout(()=>el.classList.remove('show'), 2500);
-}
-
-/* ═══ Modal keyboard ═══ */
-document.getElementById('tmpl-name-input').addEventListener('keydown', e => { if(e.key==='Enter') saveTemplate(); if(e.key==='Escape') closeSaveModal(); });
-
-// 起動時認証確認
-checkAuth();
+// 初期ロード
 loadSample(0);
 </script>
 </body>
