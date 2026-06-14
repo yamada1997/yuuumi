@@ -106,12 +106,12 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Hiragino Sans','Yu Gothic UI'
 .ps-footer{position:absolute;bottom:2.5%;right:3%;font-size:.8vw;opacity:.4;font-weight:600}
 
 /* Slide: Situation */
-.ps-sit-slide{background:#fff;padding:4% 5%}
+.ps-sit-slide{background:#fff;padding:4% 5%;display:flex;flex-direction:column}
 .ps-hd{display:flex;align-items:center;gap:1.5%;margin-bottom:3%}
 .ps-tag{color:#fff;font-size:.82vw;font-weight:800;padding:.4% 1.4%;border-radius:20px;letter-spacing:.07em;flex-shrink:0}
 .ps-htitle{font-size:2vw;font-weight:900;color:#1a1a2e;letter-spacing:-.02em}
-.ps-sit-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:2%;align-content:start}
-.ps-sit-item{background:#f5f7ff;border-radius:10px;padding:3% 3.5%;border-left:4px solid #4f8ef7}
+.ps-sit-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:2%;flex:1;grid-auto-rows:1fr}
+.ps-sit-item{background:#f5f7ff;border-radius:10px;padding:3% 3.5%;border-left:4px solid #4f8ef7;display:flex;flex-direction:column;justify-content:center}
 .ps-sit-key{font-size:1.1vw;font-weight:800;color:#4f8ef7;margin-bottom:1.2%;letter-spacing:.04em}
 .ps-sit-val{font-size:2vw;color:#1e293b;font-weight:700;line-height:1.4}
 
