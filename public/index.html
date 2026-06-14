@@ -161,8 +161,22 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Hiragino Sans','Yu Gothic UI'
   body.print-slide .view-slide{display:block!important}
   body.print-slide .view-handout{display:none!important}
   body.print-slide .slide-deck{gap:0}
-  body.print-slide .pslide{aspect-ratio:unset;width:100%;height:100vh;border-radius:0;box-shadow:none;page-break-after:always;break-after:page}
+  body.print-slide .pslide{aspect-ratio:unset;width:100%;height:100vh;border-radius:0;box-shadow:none;page-break-after:always;break-after:page;overflow:hidden}
   body.print-slide .pslide:last-child{page-break-after:auto;break-after:auto}
+  /* Fix vw-based font sizes for A4 landscape print */
+  body.print-slide .ps-emoji{font-size:40pt}
+  body.print-slide .ps-main-title{font-size:26pt}
+  body.print-slide .ps-sub{font-size:10pt}
+  body.print-slide .ps-footer{font-size:7pt}
+  body.print-slide .ps-tag{font-size:8pt}
+  body.print-slide .ps-htitle{font-size:18pt}
+  body.print-slide .ps-sit-key{font-size:9pt}
+  body.print-slide .ps-sit-val{font-size:17pt}
+  body.print-slide .ps-section-label{font-size:8pt}
+  body.print-slide .ps-talk-icon{font-size:11pt}
+  body.print-slide .ps-talk-text{font-size:10pt}
+  body.print-slide .ps-point-label{font-size:7pt}
+  body.print-slide .ps-point-text{font-size:9pt}
   body.print-handout .view-handout{display:block!important}
   body.print-handout .view-slide{display:none!important}
   body.print-handout .ho-wrap{border-radius:0;box-shadow:none;max-width:100%}
